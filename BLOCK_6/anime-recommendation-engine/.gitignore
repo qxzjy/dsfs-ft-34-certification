@@ -1,0 +1,6 @@
+data/
+datas/
+utils/__pycache__/
+anaconda_projects/
+.ipynb_checkpoints
+__pycache__/

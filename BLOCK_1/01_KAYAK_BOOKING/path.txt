@@ -1,0 +1,21 @@
+BASE_PATH = /html/body/div[4]/div/div/div/div[2]/div[3]/div[2]/div[2]/div[3]/div[@data-testid="property-card"]
+
+--
+
+Nom hotel : //*[@id="hp_hotel_name"]/div/h2/text()
+
+--
+
+Note : //*[@id="js--hp-gallery-scorecard"]/a/div/div/div/div[1]/text()
+
+--
+
+GPS : //*[@id="map_trigger_header_pin"]/@data-atlas-latlng
+
+--
+
+Description : //*[@id="basiclayout"]//*[@data-testid="property-description"]/text()
+
+--
+
+Url hotel : BASE_PATH/div[1]/div[2]/div/div/div[1]/div/div[1]/div/h3/a[@data-testid="title-link"]/@href
