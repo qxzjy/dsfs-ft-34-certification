@@ -1,0 +1,9 @@
+pandas
+mlflow
+scikit-learn
+xgboost
+plotly
+streamlit
+fastapi[standard]
+numpy
+pydantic
