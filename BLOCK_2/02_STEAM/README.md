@@ -20,8 +20,8 @@ To carry out this project, we'll have to adopt different levels of analysis :
 
 This project was realized in Spark on Databricks.
 
-[Macro analysis](https://qxzjy-get-around-streamlit.hf.space/) (Databricks)\
-[Genre and plateform analysis](https://qxzjy-get-around-fastapi.hf.space/docs) (Databricks) \
+[Macro analysis](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/4492848559680754/1059188524681607/4195391335503949/latest.html) (Databricks)\
+[Genre and plateform analysis](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/4492848559680754/1136951317345610/4195391335503949/latest.html) (Databricks) \
 
 ## Authors
 
