@@ -63,7 +63,7 @@ if __name__ == "__main__":
                 ),
             ),
         ],
-        verbose=True,
+        verbose=True
     )
 
     # Log experiment to MLFlow
