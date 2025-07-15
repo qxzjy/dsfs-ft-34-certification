@@ -22,7 +22,7 @@ We're going to try out and compare models to determine which will be the most ef
 | <ins>_02_lr.ipynb_</ins> | Logistic Regression model |
 | <ins>_03_rfc.ipynb_</ins> | Random Forest Classifier model |
 | <ins>_04_xgbc.ipynb_</ins> | XGBoost Classifier model |
-| <ins>_05_performance_assessment.ipynb_</ins> | Comparison of models and recommendations |
+| <ins>_05_performance_assessment.ipynb_</ins> | Comparison of models |
 
 ## Authors
 
