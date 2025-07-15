@@ -60,8 +60,8 @@ filename = "hotels.json"
 
 # If file already exists, delete it before crawling (because Scrapy will 
 # concatenate the last and new results otherwise)
-if filename in os.listdir('data/'):
-        os.remove('data/' + filename)
+if filename in os.listdir("../data/"):
+        os.remove("../data/" + filename)
 
 # Declare a new CrawlerProcess with some settings
 ## USER_AGENT => Simulates a browser on an OS
@@ -69,10 +69,10 @@ if filename in os.listdir('data/'):
 ## FEEDS => Where the file will be stored 
 ## More info on built-in settings => https://docs.scrapy.org/en/latest/topics/settings.html?highlight=settings#settings
 process = CrawlerProcess(settings = {
-    'USER_AGENT': 'Chrome/97.0',
-    'LOG_LEVEL': logging.INFO,
+    "USER_AGENT": "Chrome/97.0",
+    "LOG_LEVEL": logging.INFO,
     "FEEDS": {
-        'data/' + filename: {"format": "json"},
+        "../data/" + filename: {"format": "json"},
     }
 })
 
