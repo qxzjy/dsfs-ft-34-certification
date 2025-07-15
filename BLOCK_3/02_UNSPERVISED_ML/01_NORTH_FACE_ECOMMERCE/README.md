@@ -1,0 +1,26 @@
+# The North Face eCommerce ⛰️
+
+<center><img src='data:image/png;base64,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' height='250'></center>
+
+
+## Description
+
+[The North Face](https://www.thenorthface.fr/) is an American outdoor recreation product company, founded in 1968 to supply climbers. The North Face produces clothing, footwear, and outdoor equipment. By the late 1990s customers had expanded beyond outdoor enthusiasts and in the 2000s it became a fashion style symbol.
+
+The marketing department would like to take advantage of machine learning solutions to boost online sales on the website.
+
+They have identified two major solutions that could have a huge effect on the conversion rates :
+- Deploying a recommender system that will allow to suggest additionnal products to users, that are similar to the items they are already interested in. The recommendations could be materialized by a "you might also be interested by these products..." section that would appear on each product page of the website.
+- Improving the structure of the products catalog thanks to topic extraction. The idea is to use unsupervised methods to challenge the existing categories : is it possible to find new categories of product that would be more suitable for the navigation on the website ?
+
+In this project, we'll work with a corpus of item descriptions from The North Face's product catalog.
+
+## Notebooks
+
+| Name | Description |
+|:-|:-|
+| <ins>_00_project.ipynb_</ins> | Preprocessing, TF-IDF, DBScan and LSA |
+
+## Authors
+
+[Maxime RENAULT](https://github.com/qxzjy)
