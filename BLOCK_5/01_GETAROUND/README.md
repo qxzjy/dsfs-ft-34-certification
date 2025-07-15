@@ -25,7 +25,7 @@ In order to mitigate those issues we’ve decided to implement a minimum delay b
 
 It solves the late checkout issue but also potentially hurts Getaround/owners revenues: we need to find the right trade off.
 
-In addition, we were asked to work on a price optimizer for ownerss to suggest them an optimal price based on all the characteristics of all the rentals that had already taken place.
+In addition, we were asked to work on a price optimizer for owners to suggest them an optimal price based on all the characteristics of all the rentals that had already taken place.
 
 ## Web pages
 
