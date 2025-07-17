@@ -1,5 +1,5 @@
 ---
-title: Get Around Streamlit
+title: Streamlit Getaround
 emoji: 🚀
 colorFrom: gray
 colorTo: indigo
@@ -8,6 +8,6 @@ app_port: 8501
 tags:
 - streamlit
 pinned: false
-short_description: 'Get Around project : Streamlit'
+short_description: 'Getaround project : Streamlit'
 ---
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
