@@ -22,7 +22,6 @@ This API provide endpoints allowing to navigate through the pricing dataset and 
 * `/predict` To predict daily rental price based on features, on one observation
 * `/batch-predict` To predict daily rental price based on features, on a batch of observation
 
-Check out documentation below 👇 for more information on each endpoint.
 """
 
 tags_metadata = [
@@ -50,6 +49,11 @@ app = FastAPI(
     },
     openapi_tags=tags_metadata
 )
+
+DATASET_PATH = "https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_pricing_project.csv"
+
+MODEL_NAME = "get-around-princing_XGBR"
+MODEL_VERSION = "latest"
 
 class GroupBy(BaseModel):
     column: str
@@ -82,13 +86,9 @@ async def preview_dataset(rows: int=5):
     * `rows` : The number of rows you want to preview (default value `5`)
     """
 
-    dataset = pd.read_csv(
-        "https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_pricing_project.csv",
-        index_col=0
-    )
+    dataset = pd.read_csv(DATASET_PATH, index_col=0)
 
     return dataset.head(rows).to_json()
-
 
 @app.get("/unique-values", tags=["EDA"])
 async def unique_values(column: str):
@@ -98,13 +98,9 @@ async def unique_values(column: str):
     * `column` : The column you want to retrieve unique values from
     """
 
-    dataset = pd.read_csv(
-        "https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_pricing_project.csv",
-        index_col=0
-    )
+    dataset = pd.read_csv(DATASET_PATH, index_col=0)
     
     return pd.Series(dataset[column].unique()).to_json()
-
 
 @app.post("/group_by", tags=["Data operations"])
 async def group_by(group_by: GroupBy):
@@ -115,15 +111,11 @@ async def group_by(group_by: GroupBy):
     * `aggregation_metric` : Aggregation metric to grouped by, within `sum`, `mean`, `max`, `min`, `median`, `count`
     """
     
-    dataset = pd.read_csv(
-        "https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_pricing_project.csv",
-        index_col=0
-    )
+    dataset = pd.read_csv(DATASET_PATH, index_col=0)
 
     aggregation_function = getattr(pd.core.groupby.generic.DataFrameGroupBy, group_by.aggregation_metric)
 
     return aggregation_function(dataset.groupby(group_by.column)).to_json()
-
 
 @app.post("/filter_by", tags=["Data operations"])
 async def filter_by(filter_by: FilterBy):
@@ -134,10 +126,7 @@ async def filter_by(filter_by: FilterBy):
     * `category` : Categories (at least one) to filtered by, within possible value for the column
     """
 
-    dataset = pd.read_csv(
-        "https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_pricing_project.csv",
-        index_col=0
-    )
+    dataset = pd.read_csv(DATASET_PATH, index_col=0)
 
     return dataset[dataset[filter_by.column].isin(filter_by.category)].to_json()
 
@@ -152,14 +141,12 @@ async def predict(predictionFeatures: PredictionFeatures):
 
     You need to give this endpoint all columns values as dictionnary, or form data.
     """
-    # Read data
-    # df = pd.DataFrame(dict(predictionFeatures), index=[0])
-    df = pd.DataFrame([predictionFeatures.dict()])
-    # Log model from mlflow
-    logged_model = "runs:/db53a9e5d72348d8b6b8d595b06ba841/get-around-princing"
 
-    # Load model as a PyFuncModel.
-    loaded_model = mlflow.pyfunc.load_model(logged_model)
+    # Read data
+    df = pd.DataFrame([predictionFeatures.dict()])
+
+    # Load model
+    loaded_model= mlflow.sklearn.load_model(f"models:/{MODEL_NAME}/{MODEL_VERSION}")
 
     # prediction = loaded_model.predict(df)
     prediction = loaded_model.predict(pd.DataFrame(df))
@@ -168,22 +155,20 @@ async def predict(predictionFeatures: PredictionFeatures):
     response = {"prediction": prediction.tolist()[0]}
     return response
 
-
 @app.post("/batch-predict", tags=["Machine-Learning"])
 async def batch_predict(file: UploadFile = File(...)):
     """
     Make prediction on a batch of observation. This endpoint accepts only **csv files** containing
     all the trained columns WITHOUT the target variable.
     """
+
     # Read file
     df = pd.read_csv(file.file)
 
-    # Log model from mlflow
-    logged_model = "runs:/db53a9e5d72348d8b6b8d595b06ba841/get-around-princing"
-
-    # Load model as a PyFuncModel.
-    loaded_model = mlflow.pyfunc.load_model(logged_model)
+    # Load model
+    loaded_model= mlflow.sklearn.load_model(f"models:/{MODEL_NAME}/{MODEL_VERSION}")
     
+    # prediction = loaded_model.predict(df)
     predictions = loaded_model.predict(pd.DataFrame(df))
 
     return predictions.tolist()
