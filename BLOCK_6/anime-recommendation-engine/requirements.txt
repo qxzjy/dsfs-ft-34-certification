@@ -1,0 +1,7 @@
+langchain
+langchain_mistralai
+pandas
+plotly
+scikit-learn
+sentence_transformers
+streamlit==1.37.1
