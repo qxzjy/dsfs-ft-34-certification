@@ -14,12 +14,12 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # remonte à la racine du projet
 
-DATA_ANIMES_URL = os.path.join(BASE_DIR, "datas", "animes_clean.csv")
-DATA_PROFILES_URL = os.path.join(BASE_DIR, "datas", "profiles_clean.csv")
-DATA_REVIEWS_URL = os.path.join(BASE_DIR, "datas", "reviews_clean.csv")
-DATA_SYNOPSIS_EMBEDDING_URL = os.path.join(BASE_DIR, "datas", "synopsis_embedding.json")
-DATA_ALS_RECOMMENDATION_FAVORITE_URL = os.path.join(BASE_DIR, "datas", "als_is_favorite_based_reco.csv")
-DATA_ALS_RECOMMENDATION_REVIEWS_URL = os.path.join(BASE_DIR, "datas", "als_reviews_score_based_reco.csv")
+DATA_ANIMES_URL = os.path.join(BASE_DIR, "data", "animes_clean.csv")
+DATA_PROFILES_URL = os.path.join(BASE_DIR, "data", "profiles_clean.csv")
+DATA_REVIEWS_URL = os.path.join(BASE_DIR, "data", "reviews_clean.csv")
+DATA_SYNOPSIS_EMBEDDING_URL = os.path.join(BASE_DIR, "data", "synopsis_embedding.json")
+DATA_ALS_RECOMMENDATION_FAVORITE_URL = os.path.join(BASE_DIR, "data", "als_is_favorite_based_reco.csv")
+DATA_ALS_RECOMMENDATION_REVIEWS_URL = os.path.join(BASE_DIR, "data", "als_reviews_score_based_reco.csv")
 
 # ANIMES
 @st.cache_data

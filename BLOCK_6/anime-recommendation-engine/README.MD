@@ -1,7 +1,5 @@
 # Anime recommendation engine 🏯
 
-Welcome to our Data Science & Engineering fullstack project !
-
 ## Description
 
 This app provides personalized anime recommendations using three main approaches:
@@ -23,34 +21,26 @@ Enjoy discovering new anime tailored to your tastes!
 
 ## Getting Started
 
-<a href="https://marjg-anime-recommendation-engine.hf.space/" target="_blank">Here is the link to the app</a>
+<a href="https://qxzjy-streamlit-anime-recommandation-engine.hf.space/" target="_blank">Here is the link to the app</a>
 
-### Dependencies
+### Run application
 
-For local use :
-* Feel free to use our DockerHub Image : `lyxor/anime-recommendation-engine`
-* All needed libraries are in the `requirements.txt` file
-* A mistral api key
+To deploy the app locally  :
+1. Clone the repository :\
+`$ git clone https://github.com/qxzjy/anime-recommendation-engine.git`
+2. Go to the repository :\
+`$ cd anime-recommendation-engine`
+3. Add your MISTRAL_API_KEY in your environnement variable :\
+`$ export MISTRAL_API_KEY=your_key`
+4. Launch the steamlit app :\
+`$ streamlit run app.py`
 
-### Installing and execute
-
-For running the app in local  :
-* `git clone https://github.com/qxzjy/anime-recommendation-engine.git`
-* go inside anime-recommendation-engine
-* add your MISTRAL_API_KEY in your environnement variable or export it : `export MISTRAL_API_KEY=your_key`
-
-With DockerHub image:
-* `docker run -p 8501:8501 -v $(pwd):/app -e MISTRAL_API_KEY=$MISTRAL_API_KEY lyxor/anime-recommendation-engine`
-
-With local docker image:
-* `docker build . -t your_image_name`
-* `docker run -p 8501:8501 -v $(pwd):/app -e MISTRAL_API_KEY=$MISTRAL_API_KEY your_image_name`
+To deploy the app with DockerHub image :\
+`$ docker run -p 8501:8501 -v $(pwd):/app -e MISTRAL_API_KEY=$MISTRAL_API_KEY lyxor/anime-recommendation-engine`
 
 ## Authors
 
-By [@Marjorie](https://github.com/Marjorie-J), [@Antoine](https://github.com/AntOG96), [@Maxime](https://github.com/qxzjy) and [@Florent](https://github.com/LyXoR51)
-
-## Version History
-
-* 0.1
-    * Initial Release
+[Maxime RENAULT](https://github.com/qxzjy)\
+[Marjorie JANDA](https://github.com/Marjorie-J)\
+[Antoine OGER](https://github.com/AntOG96)\
+[Florent PROUST](https://github.com/LyXoR51)
