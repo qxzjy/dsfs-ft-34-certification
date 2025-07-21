@@ -6,7 +6,7 @@ Hotel name : //*[@id="hp_hotel_name"]/div/h2/text()
 
 --
 
-Rating : //*[@id="js--hp-gallery-scorecard"]/a/div/div/div/div[1]/text()
+Rating : //*[@id="js--hp-gallery-scorecard"]/a/div/div/div/div[2]/text()
 
 --
 

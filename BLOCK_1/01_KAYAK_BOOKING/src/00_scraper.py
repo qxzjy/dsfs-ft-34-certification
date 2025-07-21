@@ -47,7 +47,7 @@ class BookingSpider(scrapy.Spider):
             # Getting all necessaries info and returning it : name, rating, latitude, longitude, description, URL and index
             yield {
                 'name': response.xpath('//*[@id="hp_hotel_name"]/div/h2/text()').get(),
-                'rating': response.xpath('//*[@id="js--hp-gallery-scorecard"]/a/div/div/div/div[1]/text()').get(),
+                'rating': response.xpath('//*[@id="js--hp-gallery-scorecard"]/a/div/div/div/div[2]/text()').get(),
                 'lat': latitude,
                 'lon': longitude,
                 'description': response.xpath('//*[@id="basiclayout"]//*[@data-testid="property-description"]/text()').get(),
