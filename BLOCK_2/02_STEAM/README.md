@@ -1,7 +1,6 @@
 # Steam's videogames platform 👾
 
-<center><img src='https://full-stack-assets.s3.eu-west-3.amazonaws.com/images/Steam_2016_logo_black.png'></center>
-
+<center><img src='./data/logo.png' height='200'></center>
 
 ## Description
 

@@ -1,7 +1,6 @@
 # Tinder Speed Dating ⏱️
 
-<center><img src='https://full-stack-assets.s3.eu-west-3.amazonaws.com/M03-EDA/Tinder-Symbole.png' height='250'></center>
-
+<center><img src='./data/logo.png' height='200'></center>
 
 ## Description
 

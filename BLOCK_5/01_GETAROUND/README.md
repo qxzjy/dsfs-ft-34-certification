@@ -1,7 +1,6 @@
 # Getaround Analysis 🚗
 
-<center><img src='https://lever-client-logos.s3.amazonaws.com/2bd4cdf9-37f2-497f-9096-c2793296a75f-1568844229943.png' height='250'></center>
-
+<center><img src='./data/logo.png' height='200'></center>
 ## Description
 
 [GetAround](https://fr.getaround.com/) is the Airbnb for cars. You can rent cars from any person for a few hours to a few days! Founded in 2009, this company has known rapid growth. In 2019, they count over 5 million users and about 20K available cars worldwide.

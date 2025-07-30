@@ -1,7 +1,6 @@
 # Walmart sales 🏪
 
-<center><img src='https://logo-marque.com/wp-content/uploads/2021/11/Walmart-Logo.png' height='250'></center>
-
+<center><img src='./data/logo.png' height='200'></center>
 
 ## Description
 

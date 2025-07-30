@@ -1,6 +1,6 @@
 # Plan your trip with Kayak ✈️
 
-<center><img src='https://seekvectorlogo.com/wp-content/uploads/2018/01/kayak-vector-logo.png' height='250'></center>
+<center><img src='./data/logo.png' height='200'></center>
 
 
 ## Description
