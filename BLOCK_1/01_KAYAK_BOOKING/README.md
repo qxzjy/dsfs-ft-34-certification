@@ -2,7 +2,6 @@
 
 <center><img src='./data/logo.png' height='200'></center>
 
-
 ## Description
 
 [Kayak](https://www.kayak.com) is a travel search engine that helps user plan their next trip at the best price.

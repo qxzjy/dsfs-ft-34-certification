@@ -2,7 +2,6 @@
 
 <center><img src='./data/logo.png' height='200'></center>
 
-
 ## Description
 
 [The North Face](https://www.thenorthface.fr/) is an American outdoor recreation product company, founded in 1968 to supply climbers. The North Face produces clothing, footwear, and outdoor equipment. By the late 1990s customers had expanded beyond outdoor enthusiasts and in the 2000s it became a fashion style symbol.
