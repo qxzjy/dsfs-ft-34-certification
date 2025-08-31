@@ -1,9 +1,0 @@
-pandas
-mlflow==2.22.1
-scikit-learn==1.6.1
-xgboost
-plotly
-streamlit
-fastapi[standard]
-numpy
-pydantic
