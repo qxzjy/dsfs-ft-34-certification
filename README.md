@@ -1,4 +1,4 @@
-# Project portfolio - Machine Learning Engineer certification
+# Machine Learning Engineer certification
 
 This repository contains all projects completed as part of the RNCP35288 certification - Level 6 - Machine Learning Engineer
 
