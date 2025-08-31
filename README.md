@@ -100,7 +100,6 @@ Block 2 Steam: Project carried out on Databricks with PySpark. See the project R
 │       └── README.md
 ├── BLOCK_6/
 |   └── anime-recommendation-engine/
-│       ├── data/
 │       ├── notebooks/
 │       ├── streamlit/
 │       └── README.md
